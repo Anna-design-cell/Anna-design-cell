@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprehensive Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:black;
+            color: wheat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        form {
+            background-color:rgba(165, 42, 42, 0.253);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        label {
+            display: ruby-base;
+            margin-bottom: 10px;
+            font-weight:bold;
+            color: rgba(128, 128, 128, 0.432);
+            
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"],
+        input[type="date"],
+        input[type="color"],
+        input[type="range"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 13px;
+            border: 1px solid bisque;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: wheat;
+        }
+        fieldset {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            color:grey;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"],
+        button {
+            background-color: #565747a8;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover,
+        button:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="Anna.php" enctype="multipart/form-data">
+        <h1>Fill the form</h1>
+        <label for="text">Text Input:</label>
+        <input type="text" id="text" name="text" placeholder="Enter name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <fieldset>
+            <legend>Gender:</legend>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male" required> Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female"> Female
+            </label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Year:</legend>
+            <label for="Year1">
+                <input type="checkbox" id="year1" name="Year[]" value="year1"> YEAR1
+            </label>
+            <label for="Year2">
+                <input type="checkbox" id="year2" name="Year[]" value="year2"> YEAR2
+            </label>
+            <label for="Year3">
+                <input type="checkbox" id="year3" name="Year[]" value="year3"> YEAR3
+            </label>
+        </fieldset><br>
+
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="course">Course:</label>
+        <select id="course" name="Course" required>
+            <option value="">Select a Course of your choice</option>
+            <option value="PHP">HYPERTEXT PROCESSOR</option>
+            <option value="javascript">JAVASCRIPT</option>
+            <option value="fop">FONDERMENTALS OF PROGRAMMING</option>
+            <option value="WUI">WEB USER INTERFACE</option>
+            <option value="GUI">GRAPHICAL USER INTERFACE</option>
+            <option value="networking">NETWORKING</option>
+            <option value="es">EMBEDDED SYSTEMS</option>
+            <option value="maths">APPLIED MATHEMATICS</option>
+            <option value="PHY">APPLIED PHYSICS</option>
+            <option value="eng">ENGLISH</option>
+            <option value="DB">DATABASE</option>
+        </select><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+        <label for="color"> Choose Favorite Color:</label>
+        <input type="color" id="color" name="color" value="#ff0000">
+
+        <label for="volume">Tell us Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100">
+
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search">
+
+        <label for="tel">Telephone:</label>
+        <input type="tel" id="tel" name="tel" placeholder="123-456-7890">
+
+        <label for="url">Website:</label>
+        <input type="url" id="url" name="url" placeholder="https://example.com">
+
+       
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
